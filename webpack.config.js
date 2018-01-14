@@ -36,13 +36,6 @@ module.exports = (env) => {
           }
         },
         {
-          test: /\.jsx$/,
-          loader: "babel-loader",
-          query: {
-            presets: ["es2015"]
-          }
-        },
-        {
           test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
           loader: "url-loader?limit=10000&mimetype=application/font-woff"
         },
@@ -113,14 +106,25 @@ module.exports = (env) => {
                   }
                 },
                 {
+                  loader: "sass-loader",
+                  options: {
+                    sourceMap: true,
+                    data: "@import 'vars';",
+                    includePaths: [
+                      path.join(dirs.client.src),
+                      path.join(dirs.client.src, "assets"),
+                      path.join(dirs.client.src, "components")
+                    ]
+                  }
+                },
+                {
                   loader: "postcss-loader?parser=postcss-scss",
                   options: {
                     plugins: [
                       require("autoprefixer")()
                     ]
                   }
-                },
-                "sass-loader"
+                }
               ]
             })
           },
@@ -163,6 +167,18 @@ module.exports = (env) => {
                   loader: "css-loader",
                   options: {
                     importLoaders: 1
+                  }
+                },
+                {
+                  loader: "sass-loader",
+                  options: {
+                    sourceMap: true,
+                    data: "@import 'vars';",
+                    includePaths: [
+                      path.join(dirs.client.src),
+                      path.join(dirs.client.src, "assets"),
+                      path.join(dirs.client.src, "components")
+                    ]
                   }
                 },
                 {

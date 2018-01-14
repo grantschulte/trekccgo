@@ -36,3 +36,8 @@ a {
     color: darken($purple, 10%);
   }
 }
+
+::selection {
+  background-color: $orange;
+  color: $white;
+}
