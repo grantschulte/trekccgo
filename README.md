@@ -1,6 +1,6 @@
 # Star Trek CCGO
 
-#### Table of Contents
+### Table of Contents
 - [Overview](#overview)
   - [Client](#client)
   - [Server](#server)
@@ -11,6 +11,10 @@
 - [Directory Structure](#directory-structure)
 
 ---
+
+![alt text][logo]
+
+[logo]: https://github.com/grantschulte/trekccgo/master/client/src/assets/images/picard.jpg "Jean-Luc Picard"
 
 ## Overview
 This project uses Express to serve a JSON API and a React front-end client.

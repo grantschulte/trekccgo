@@ -48,11 +48,11 @@ module.exports = (env) => {
         },
         {
           test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-          loader: `file-loader?name=${dirs.client.src}/fonts/**/[name].[ext]`
+          loader: `file-loader?name=${dirs.client.src}/assets/fonts/**/[name].[ext]`
         },
         {
           test: /\.(ico|png|jpg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-          loader: `file-loader?name=${dirs.client.src}/images/**/[name].[ext]`
+          loader: `file-loader?name=${dirs.client.src}/assets/images/**/[name].[ext]`
         }
       ]
     },
@@ -80,12 +80,12 @@ module.exports = (env) => {
           flatten: true
         },
         {
-          from: `${dirs.client.src}/_assets/images/**/*`,
+          from: `${dirs.client.src}/assets/images/**/*`,
           to: `${dirs.client.build}/images`,
           flatten: true
         },
         {
-          from: `${dirs.client.src}/_assets/fonts/**/*`,
+          from: `${dirs.client.src}/assets/fonts/**/*`,
           to: `${dirs.client.build}/fonts`,
           flatten: true
         }
