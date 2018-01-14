@@ -1,0 +1,45 @@
+.LcarsBar {
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  overflow: hidden;
+
+  span {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  &__begin {
+    padding: 0 2rem 0 0;
+  }
+
+  &__mid {
+    margin-right: auto;
+  }
+
+  &__end {
+    padding: 0 0 0 2rem;
+  }
+
+  &__blank {
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+    height: 100%;
+  }
+
+  &__knockout {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-right: auto;
+    padding: 0 1rem 0 0;
+    padding-top: 3px;
+    font-size: 53px;
+    margin-right: auto;
+  }
+}

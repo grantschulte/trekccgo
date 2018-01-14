@@ -1,0 +1,24 @@
+.LcarsBody {
+  flex: 1 1 auto;
+  padding: 0 5em;
+
+  h1 {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+    font-size: 60px;
+  }
+
+  &__row {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    span:first-child {
+      padding-right: 0.5em;
+    }
+  }
+}
