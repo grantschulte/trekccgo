@@ -1,5 +1,4 @@
 function mongoURI(env = process.env.NODE_ENV) {
-  console.info("DBURI", process.env.MONGODB_URI);
   switch (env) {
     case "test":
       return `mongodb://localhost/trekccgo-test`;

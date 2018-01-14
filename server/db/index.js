@@ -13,15 +13,19 @@ const db = mongoose.connect(dbURI, {
 });
 
 db.on("connected", () => {
-  console.log("Database connected at ", dbURI);
+  console.log("Database connected at:");
+  console.log(dbURI);
+  console.log("================================");
 });
 
 db.on("disconnected", () => {
   console.log("Database connection closed.");
+  console.log("================================");
 });
 
 db.on("error", () => {
   console.log("Database connection error.");
+  console.log("================================");
 });
 
 module.exports = db;
