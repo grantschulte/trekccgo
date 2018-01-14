@@ -17,7 +17,7 @@ module.exports = (env) => {
 
   const common = {
     entry: {
-      "app": path.join(dirs.client.src, "index.js")
+      "app": path.join(dirs.client.src, "index")
     },
 
     output: {
@@ -31,9 +31,12 @@ module.exports = (env) => {
         {
           test: /\.js$/,
           loader: "babel-loader",
-          query: {
-            presets: ["es2015"]
-          }
+          exclude: /node_modules/
+        },
+        {
+          test: /.jsx?$/,
+          loader: "babel-loader",
+          exclude: /node_modules/
         },
         {
           test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -58,7 +61,8 @@ module.exports = (env) => {
     resolve: {
       modules: [
         "node_modules"
-      ]
+      ],
+      extensions: [".js", ".jsx"]
     },
 
     plugins: [

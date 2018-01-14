@@ -15,7 +15,7 @@ function Menu(props: Props): React.Node {
 
   return (
     <nav>
-      <ul id="HomePage__Menu">
+      <ul id="HomeMenu">
         {listItems}
       </ul>
     </nav>

@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <div id="App">
-        <div id="App__page">
+        <div id="App__Page">
           <Route exact path="/" component={HomePage} />
           <Route exact path="/lcars" component={LcarsPage} />
           <Route exact path="/cards" component={CardsPage} />
