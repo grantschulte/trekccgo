@@ -14,7 +14,7 @@
 
 ![alt text][logo]
 
-[logo]: https://github.com/grantschulte/trekccgo/master/client/src/assets/images/picard.jpg "Jean-Luc Picard"
+[logo]: https://github.com/grantschulte/trekccgo/blob/master/client/src/assets/images/picard.jpg "Jean-Luc Picard"
 
 ## Overview
 This project uses Express to serve a JSON API and a React front-end client.
