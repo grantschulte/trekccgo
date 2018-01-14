@@ -6,6 +6,8 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const dotenv = require("dotenv");
 
+dotenv.load();
+
 const app = express();
 const db  = require("./db");
 
@@ -13,8 +15,6 @@ const { dirs, port } = require("./config").app;
 const { isProd } = require("./utils");
 const routes = require("./routes/api");
 const errors = require("./middlewares/errors");
-
-dotenv.load();
 
 // Configuration
 

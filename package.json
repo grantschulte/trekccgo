@@ -11,7 +11,7 @@
     "lint:client": "eslint ./client/**/*.js",
     "lint:server": "eslint ./server/**/*.js",
     "server:dev": "nodemon server.js",
-    "start": "node server.js",
+    "start": "NODE_ENV=production node server.js",
     "test:server": "NODE_ENV=test mocha ./client/src/**/*.spec.js --exit",
     "test:server": "NODE_ENV=test mocha ./server/**/*.spec.js --exit"
   },

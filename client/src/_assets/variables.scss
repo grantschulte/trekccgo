@@ -1,0 +1,44 @@
+/**
+ *
+ * Variables
+ *
+ */
+
+// Fonts
+
+$font-lcars: "LCARS", Helvetica, sans-serif;
+$font-lcars-condensed: "LCARS-Condensed", Helvetica, sans-serif;
+
+// Colors
+
+$colors-lcars: (
+  black: #000000,
+  purple: #9999FF,
+  blue: #9999CC,
+  orange: #FF9900,
+  beige: #FFCC99,
+  magenta: #BC9BC1,
+  rose: #CC99CC
+);
+
+$black: #000000;
+$white: #FFFFFF;
+
+// Stacking Context
+
+$z-index: (
+  modal:    900,
+  overlay:  800,
+  dropdown: 700,
+  header:   600,
+  footer:   500
+);
+
+// Breakpoints
+
+$xs: 320px;
+$sm: 480px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1220px;
+$xxl: 1440px;

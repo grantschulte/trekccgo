@@ -1,14 +1,14 @@
 // @flow
 
-import React from "react";
-import "./home.scss";
+import * as React from "react";
+import "./Home.scss";
 
-function Home() {
+function HomePage(): React.Node {
   return (
-    <div>
-      <h1>Home</h1>
+    <div id="HomePage">
+      <h1>Hello</h1>
     </div>
   );
 }
 
-export default Home;
+export default HomePage;

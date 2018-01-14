@@ -8,7 +8,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const UglifyWebpackPlugin = require("uglifyjs-webpack-plugin");
 const ImageminPlugin = require("imagemin-webpack-plugin").default;
 
-const { dirs } = require("./server/config");
+const { dirs } = require("./server/config").app;
 
 module.exports = (env) => {
   const target = process.env.npm_lifecycle_event;
@@ -80,12 +80,12 @@ module.exports = (env) => {
           flatten: true
         },
         {
-          from: `${dirs.client.src}/images/**/*`,
+          from: `${dirs.client.src}/_assets/images/**/*`,
           to: `${dirs.client.build}/images`,
           flatten: true
         },
         {
-          from: `${dirs.client.src}/fonts/**/*`,
+          from: `${dirs.client.src}/_assets/fonts/**/*`,
           to: `${dirs.client.build}/fonts`,
           flatten: true
         }
