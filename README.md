@@ -1,4 +1,4 @@
-# Express, React, Flow, and Webpack Starter
+# Star Trek CCGO
 
 #### Table of Contents
 - [Overview](#overview)

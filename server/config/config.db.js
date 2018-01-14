@@ -1,7 +1,7 @@
 function mongoURI(env = process.env.NODE_ENV) {
   switch (env) {
     case "test":
-      return `mongodb://localhost/exrf-test`;
+      return `mongodb://localhost/trekccgo-test`;
       break;
 
     case "production":
@@ -9,7 +9,7 @@ function mongoURI(env = process.env.NODE_ENV) {
       break;
 
     default:
-      return `mongodb://localhost/exrf-dev`;
+      return `mongodb://localhost/trekccgo-dev`;
   }
 }
 

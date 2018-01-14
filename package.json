@@ -1,7 +1,7 @@
 {
-  "name": "exrf",
+  "name": "treckccgo",
   "version": "0.1.0",
-  "description": "Express, React, Flow, and Webpack Starter",
+  "description": "Star Trek Customizable Card Game Online",
   "main": "server.js",
   "scripts": {
     "build": "yarn clean && NODE_ENV=production webpack",
