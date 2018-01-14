@@ -21,8 +21,14 @@ $colors-lcars: (
   rose: #CC99CC
 );
 
-$black: #000000;
-$white: #FFFFFF;
+$black:     #000000;
+$white:     #FFFFFF;
+$purple:    map-get($colors-lcars, purple);
+$blue:      map-get($colors-lcars, blue);
+$orange:    map-get($colors-lcars, orange);
+$beige:     map-get($colors-lcars, beige);
+$magenta:   map-get($colors-lcars, magenta);
+$rose:      map-get($colors-lcars, rose);
 
 // Stacking Context
 
