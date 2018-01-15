@@ -4,12 +4,12 @@ function mongoURI(env = process.env.NODE_ENV) {
       return `mongodb://localhost/trekccgo-test`;
       break;
 
-    case "production":
-      return process.env.MONGODB_URI;
+    case "development":
+      return `mongodb://localhost/trekccgo-dev`;
       break;
 
     default:
-      return `mongodb://localhost/trekccgo-dev`;
+      return process.env.MONGODB_URI;
   }
 }
 
