@@ -8,6 +8,7 @@
     "clean": "rm -rf ./client/build",
     "client:dev": "webpack-dev-server",
     "flow:client": "yarn run flow status",
+    "heroku-postbuild": "npm run build",
     "lint:client": "eslint ./client/**/*.js",
     "lint:server": "eslint ./server/**/*.js",
     "server:dev": "nodemon server.js",
