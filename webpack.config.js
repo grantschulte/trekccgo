@@ -16,6 +16,7 @@ module.exports = (env) => {
 
   console.log("ENVS", env);
   console.log("ENVS", process.env.NODE_ENV);
+  console.log("IS PROD", isProd);
 
   // Common Configuration
 
