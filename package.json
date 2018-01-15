@@ -9,7 +9,7 @@
     "client:dev": "webpack-dev-server",
     "deploy:staging": "git push heroku master",
     "flow:client": "yarn run flow status",
-    "heroku-postbuild": "npm run build",
+    "heroku-postbuild": "yarn build",
     "lint:client": "eslint ./client/**/*.js",
     "lint:server": "eslint ./server/**/*.js",
     "server:dev": "nodemon server.js",
@@ -66,5 +66,9 @@
     "flow-bin": "0.63.1",
     "nodemon": "1.12.7",
     "webpack-dev-server": "2.9.7"
+  },
+  "engines": {
+    "node": "8.9.3",
+    "npm": "5.6.0"
   }
 }

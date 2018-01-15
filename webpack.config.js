@@ -9,6 +9,7 @@ const UglifyWebpackPlugin = require("uglifyjs-webpack-plugin");
 const ImageminPlugin = require("imagemin-webpack-plugin").default;
 
 const { dirs } = require("./server/config").app;
+const { isProd, isDev } = require("./server/utils");
 
 module.exports = (env) => {
   const target = process.env.npm_lifecycle_event;
@@ -92,7 +93,7 @@ module.exports = (env) => {
 
   // Development Configuration
 
-  if (target === "start:dev" || target === "client:dev") {
+  if (isDev) {
     return merge(common, {
       devtool: "source-map",
 
@@ -158,7 +159,7 @@ module.exports = (env) => {
 
   // Production Configuration
 
-  if (target === "build") {
+  if (isProd) {
     return merge(common, {
       module: {
         rules: [
