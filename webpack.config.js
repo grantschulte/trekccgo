@@ -12,7 +12,10 @@ const { dirs } = require("./server/config").app;
 const { isProd, isDev } = require("./server/utils");
 
 module.exports = (env) => {
-  const target = process.env.npm_lifecycle_event;
+  // const target = process.env.npm_lifecycle_event;
+
+  console.log("ENVS", env);
+  console.log("ENVS", process.env.NODE_ENV);
 
   // Common Configuration
 
