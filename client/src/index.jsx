@@ -4,7 +4,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import App from "./components/App/App";
-import "./assets/index.scss";
+import "./index.scss";
 
 const rootEl = document.getElementById("root");
 

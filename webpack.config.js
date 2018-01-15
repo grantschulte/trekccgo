@@ -12,12 +12,6 @@ const { dirs } = require("./server/config").app;
 const { isProd, isDev } = require("./server/utils");
 
 module.exports = (env) => {
-  // const target = process.env.npm_lifecycle_event;
-
-  console.log("ENVS", env);
-  console.log("ENVS", process.env.NODE_ENV);
-  console.log("IS PROD", isProd);
-
   // Common Configuration
 
   const common = {
@@ -115,6 +109,15 @@ module.exports = (env) => {
                   }
                 },
                 {
+                  loader: "postcss-loader?parser=postcss-scss",
+                  options: {
+                    sourceMap: true,
+                    plugins: [
+                      require("autoprefixer")()
+                    ]
+                  }
+                },
+                {
                   loader: "sass-loader",
                   options: {
                     sourceMap: true,
@@ -123,14 +126,6 @@ module.exports = (env) => {
                       path.join(dirs.client.src),
                       path.join(dirs.client.src, "assets"),
                       path.join(dirs.client.src, "components")
-                    ]
-                  }
-                },
-                {
-                  loader: "postcss-loader?parser=postcss-scss",
-                  options: {
-                    plugins: [
-                      require("autoprefixer")()
                     ]
                   }
                 }
@@ -179,18 +174,6 @@ module.exports = (env) => {
                   }
                 },
                 {
-                  loader: "sass-loader",
-                  options: {
-                    sourceMap: true,
-                    data: "@import 'vars';",
-                    includePaths: [
-                      path.join(dirs.client.src),
-                      path.join(dirs.client.src, "assets"),
-                      path.join(dirs.client.src, "components")
-                    ]
-                  }
-                },
-                {
                   loader: "postcss-loader?parser=postcss-scss",
                   options: {
                     plugins: [
@@ -199,10 +182,21 @@ module.exports = (env) => {
                     ]
                   }
                 },
-                "sass-loader"
+                {
+                  loader: "sass-loader",
+                  options: {
+                    sourceMap: false,
+                    data: "@import 'vars';",
+                    includePaths: [
+                      path.join(dirs.client.src),
+                      path.join(dirs.client.src, "assets"),
+                      path.join(dirs.client.src, "components")
+                    ]
+                  }
+                }
               ]
             })
-          }
+          },
         ]
       },
 

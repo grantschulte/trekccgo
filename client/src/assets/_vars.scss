@@ -1,15 +1,5 @@
-/**
- *
- * Variables
- *
- */
-
-// Fonts
-
 $font-lcars: "LCARS", Helvetica, sans-serif;
 $font-lcars-condensed: "LCARS-Condensed", Helvetica, sans-serif;
-
-// Colors
 
 $colors-lcars: (
   black: #000000,
@@ -30,8 +20,6 @@ $beige:     map-get($colors-lcars, beige);
 $magenta:   map-get($colors-lcars, magenta);
 $rose:      map-get($colors-lcars, rose);
 
-// Stacking Context
-
 $z-index: (
   modal:    900,
   overlay:  800,
@@ -39,8 +27,6 @@ $z-index: (
   header:   600,
   footer:   500
 );
-
-// Breakpoints
 
 $xs: 320px;
 $sm: 480px;

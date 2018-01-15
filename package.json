@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "build": "yarn clean && NODE_ENV=production webpack",
+    "build:dev": "yarn clean && NODE_ENV=development webpack",
     "clean": "rm -rf ./client/build",
     "client:dev": "webpack-dev-server",
     "deploy:staging": "git push heroku master",
